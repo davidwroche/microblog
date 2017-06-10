@@ -1,0 +1,16 @@
+<nav class="ui inverted menu">
+  <header class="header item"><a href="/adminarea"> <i class="frown icon"></i>
+     Admin - Area </a></header>
+  <div class="right menu">
+    <a id="removeuser" class= "item" href="/Users"> <i class="user icon"></i>
+       Users</a>
+    <a id="removetweets" class= "item" href="/Tweets"> <i class="write square icon"></i>
+      Tweets</a>
+    <a id="logout" class= "item" href="/logout"> <i class="sign out icon"></i>
+      Logout</a>
+  </div>
+</nav>
+
+<script>
+  $("#{{_id}}").addClass("active item");
+</script>

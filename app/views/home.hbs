@@ -1,0 +1,21 @@
+<section class="ui container">
+{{> mainmenu _id="home" }}
+  <section id="hi" class="ui segment">
+      <div class="ui grid">
+  <aside class="three wide column">
+ <h3> Welcome back </h3><h1>{{user.firstName}} {{user.lastName}}</h1>
+  <div class="ui card">
+    <div class="image">
+
+      <img src="/getpicture" onerror="this.src='/images/blank.gif'"/>
+    </div>
+  </div>
+  </aside>
+
+  <aside class="thirteen wide column">
+    {{> tweet }}
+  </aside>
+      </div>
+</section>
+  </section>
+

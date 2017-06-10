@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{title}}</title>
+  <meta charset="UTF-8">
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/semantic.min.js"></script>
+  <link rel="stylesheet" media="screen" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/semantic.min.css">
+  <link rel="stylesheet" media="screen" href="css/main.css">
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+<section class="ui container">
+  {{> welcomemenu }}
+
+  <section class="ui raised segment">
+    <div class="ui grid">
+      <aside class="ui six wide column">
+        <img src="images/blog.jpg" class="ui medium image">
+      </aside>
+      <div class="ui ten wide column fluid form">
+        <div class="ui stacked segment">
+          <form action="/login" method="POST">
+            <h3 class="ui header">Log-in</h3>
+            <div class="ui error message"></div>
+            <div class="field">
+              <label>Email</label> <input placeholder="Email" type="text"
+                                          name="email">
+            </div>
+            <div class="field">
+              <label>Password</label> <input type="password" name="password">
+            </div>
+            <button class="ui blue submit button">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+<script src="validation/signval.js"></script>
+</body>
+</html>

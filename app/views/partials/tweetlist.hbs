@@ -1,0 +1,25 @@
+<div id="hi" class="ui grid">
+    <aside class="eight wide column">
+      <div class="ui stacked fluid form segment">
+        <form action="/del" method="POST">
+          <h3 class="ui header">Tweets</h3>
+          {{#each tweets}}
+            <div class="field">
+              <img class="ui avatar image"  src="/getpicture" onerror="this.src='/images/blank.gif'">
+              <div class ="ui checkbox">
+                <input  name="mes" type="checkbox" value="{{_id}}">
+                <label>{{message}}</label>
+              </div>
+            </div>
+          {{/each}}
+          <br>
+          <button class="ui blue submit button">Delete Tweet</button>
+        </form>
+    </aside>
+    <aside class="eight wide column">
+    <form action="/delall" method="POST">
+          <button class="ui blue submit button">Delete All Tweets</button>
+        </form>
+      </aside>
+      </div>
+  </div>

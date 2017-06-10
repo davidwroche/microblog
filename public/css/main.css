@@ -1,0 +1,37 @@
+h1{
+    color: gold;
+    font-family: "Sitka Heading";
+}
+h3{
+    color:azure;
+}
+body{
+    background-color: lavender;
+    background-color: ThreeDLightShadow;
+}
+#bck{
+    background-color: #1b1c1d;
+}
+#hi{
+    background-color:#750F2D;
+}
+#side{
+    background-color:#750F2D;
+    margin:auto;
+}
+input[type='file']{
+    display: inline-block;
+    width: 20%;
+    padding: 50px 0 0 0;
+    height: 50px;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url('https://cdn2.iconfinder.com/data/icons/media-and-navigation-buttons-round/512/Button_16-512.png') center center no-repeat #e4e4e4;
+    background-size: 150px 100px;
+}
+#st{
+    color: dodgerblue;
+    font-family: "Sitka Heading";
+}

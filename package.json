@@ -1,0 +1,25 @@
+{
+  "name": "microblog",
+  "version": "1.0.0",
+  "description": "Tweet Web App",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/David-Roche/microblog.git"
+  },
+  "author": "David Roche",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/David-Roche/microblog#readme",
+  "dependencies": {
+    "handlebars": "^4.0.5",
+    "hapi": "^15.1.1",
+    "hapi-auth-cookie": "^6.1.1",
+    "inert": "^4.0.2",
+    "mongoose": "^4.6.3",
+    "vision": "^4.1.0"
+  }
+}

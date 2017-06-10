@@ -1,0 +1,43 @@
+  <div id="hi" class="ui grid">
+    <aside class="four wide column">
+    <div class="ui stacked fluid form segment">
+  <form action="/thistimeline" method="POST">
+  <div class="ui selection dropdown">
+    <div class="default text">View Timeline</div>
+    <i class="dropdown icon"></i>
+    <input type="hidden" name="user">
+  <div class="menu">
+    {{#each User}}
+      <div class="item" data-value="{{_id}}">{{firstName}} {{lastName}}</div>
+{{/each}}
+</div>
+  </div>
+  <button class="ui blue submit button">View</button>
+  </form>
+    </aside>
+
+
+      <aside class="twelve wide column">
+        <table class="ui celled table segment">
+          <h1>{{user.firstName}} {{user.lastName}} Timeline</h1>
+          <thead>
+          <tr>
+            <th>Message</th>
+            <th>Image</th>
+          </tr>
+          </thead>
+          <tbody>
+          {{#each tweets}}
+            <tr>
+              <td>{{message}}</td>
+              <td> <div class="ui tiny images">
+                <img class="ui image" src="/getpic/{{{_id}}}" onerror="this.src='/images/transparent.png'"/>
+              </div></td>
+
+            </tr>
+          {{/each}}
+          </tbody>
+        </table>
+      </aside>
+    </div>
+

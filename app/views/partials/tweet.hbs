@@ -1,0 +1,67 @@
+<div class="ui fluid form segment">
+  <form class = "ui form" action="/tweet" method="POST" enctype="multipart/form-data">
+    <div class="field">
+      <label>Please enter your tweet</label>
+      <div class="ui error message"></div>
+      <textarea id="tweetarea"  name="message" type ="text" maxlength="140" ></textarea>
+      <div id ="tweetarea_feedback"></div>
+    </div>
+<div class="field">
+  <h5>To upload an image click here</h5>
+<input id="pic" type="file" name="picture"/>
+</div>
+    <button class="ui blue submit button">Tweet</button>
+  </form>
+</div>
+
+
+<script>
+  $(document).ready(function() {
+    const tweet_max = 140;
+    $('#tweetarea_feedback').html(tweet_max + ' characters remaining');
+
+    $('#tweetarea').keyup(function() {
+      var tweet_length = $('#tweetarea').val().length;
+      var tweet_remaining = tweet_max - tweet_length;
+
+      $('#tweetarea_feedback').html('You have ' + tweet_remaining + ' characters remaining for this tweet');
+      if(tweet_length>130){
+        $('#tweetarea_feedback').css('color','red');
+        $('#tweetarea_feedback').css('font-size','25px');
+
+      }
+      else if(tweet_length>100){
+        $('#tweetarea_feedback').css('color','orange');
+        $('#tweetarea_feedback').css('font-size','18px');
+
+      }
+      else if(tweet_length>60) {
+        $('#tweetarea_feedback').css('color', 'brown');
+        $('#tweetarea_feedback').css('font-size','16px');
+
+      }
+      else{
+        $('#tweetarea_feedback').css('color','black');
+        $('#tweetarea_feedback').css('font-size','12px');
+
+      }
+    });
+  });
+
+
+  $('.ui.form')
+      .form({
+        fields: {
+          message: {
+            identifier: 'message',
+            rules: [
+              {
+                type: 'minLength[1]',
+                prompt: 'You tweet cannot be blank'
+              }
+            ]
+          }
+        }
+      });
+
+</script>

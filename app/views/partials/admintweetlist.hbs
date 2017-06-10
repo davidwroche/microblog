@@ -1,0 +1,50 @@
+<section class="ui raised segment">
+  <div class="ui grid">
+    <aside class="sixteen wide column">
+      <div class="ui stacked fluid form segment">
+        <form action="/deletetweets" method="POST">
+          <table class="ui celled table segment">
+            <thead>
+            <tr>
+              <th>User</th>
+              <th>Message</th>
+              <th>Images</th>
+              <th>Select</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each Tweet}}
+              <tr>
+                <td>
+                  <img class="ui avatar image" src="/getuserpic/{{{_id}}}" onerror="this.src='/images/blank.gif'"/>
+                  {{poster.firstName}} {{poster.lastName}}</td>
+                <td>
+                  {{message}}
+                </td>
+                <td>
+                  <div class="ui tiny images">
+                    <img class="ui image" src="/getpic/{{{_id}}}" onerror="this.src='/images/transparent.png'"/>
+                  </div>
+                </td>
+                <td>
+                  <div class="ui left floated compact segment">
+                    <div class="ui fitted toggle checkbox">
+                      <input name="twe" type="checkbox" value="{{_id}}">
+                      <label></label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            {{/each}}
+            </tbody>
+          </table>
+          <button class="ui blue submit button">Delete Tweet</button>
+        </form>
+      </div>
+    </aside>
+  </div>
+  </section>
+
+
+
+
